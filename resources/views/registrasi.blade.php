@@ -27,7 +27,7 @@
     }
     .container{
       width:300px;
-      height:265px;
+      height:400px;
       border:2px solid black;
       border-radius:5%;
       position: absolute;
@@ -59,7 +59,9 @@
       <input type="text" placeholder="username" name="username" autocomplete="off" required><br>
       <input type="password" placeholder="password" name="username" autocomplete="off" required><br>
       <input type="text" placeholder="no telepon" name="username" autocomplete="off" required><br>
-      <select name=""></select>
+      <select name="">
+        
+      </select>
       <button type="submit"><b>Login</b></button>
   </div>
 </body>
