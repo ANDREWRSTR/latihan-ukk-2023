@@ -7,6 +7,6 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>ini halaman admin</h1>
+    <h1>ini halaman admin bb</h1>
 </body>
 </html>
