@@ -50,19 +50,32 @@
     button:hover{
       background-color:rgb(165, 190, 210);
     }
+
+    select {
+      width: 84.4%;
+      margin-left: 7%;
+      padding:10px;
+      border: 1px solid black;
+      margin-top: 10px;
+      border-radius: 10px;
+    }
   </style>
 </head>
 <body>
+  <form action="registrasi" method="post">
+    @method("POST")
+    @csrf
   <div class="container">
     <h1>Registrasi</h1>
-      <input type="text" placeholder="nama pegawai" name="username" autocomplete="off" required><br>
+      <input type="text" placeholder="nama pegawai" name="nama" autocomplete="off" required><br>
       <input type="text" placeholder="username" name="username" autocomplete="off" required><br>
-      <input type="password" placeholder="password" name="username" autocomplete="off" required><br>
-      <input type="text" placeholder="no telepon" name="username" autocomplete="off" required><br>
-      <select name="">
-        
+      <input type="password" placeholder="password" name="password" autocomplete="off" required><br>
+      <input type="text" placeholder="no telepon" name="telp" autocomplete="off" required><br>
+      <select name="level">
+        <option value="pelayan">pelayan</option>
       </select>
-      <button type="submit"><b>Login</b></button>
+      <button type="submit"><b>Registrasi</b></button>
   </div>
+</form>
 </body>
 </html>
