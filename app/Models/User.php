@@ -18,12 +18,12 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
-        'name',
-        'email',
-        'password',
+        "PegawaiID",
+        "NamaPetugas",
+        "Username",
+        "Password",
+        "Telp",
+        "Level"
     ];
 
     /**
@@ -45,4 +45,7 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    protected $table = "pegawai";
+
 }

@@ -31,6 +31,6 @@ Route::post('/login', [LoginController::class, 'proses_login']);
 Route::get('/registrasi', [RegistrasiController::class, 'registrasi']);
 Route::post('/registrasi', [RegistrasiController::class, 'proses_registrasi']);
 
-Route::middleware(['auth'])->group(function(){});
+
     Route::get('/home', [Controller::class, 'home']);
 
