@@ -60,7 +60,7 @@
     <h1>Login</h1>
       <input type="text" placeholder="username" name="username" autocomplete="off" required><br>
       <input type="password" placeholder="password" name="username" autocomplete="off" required><br>
-      <button type="submit"><b>Loginnn</b></button>
+      <button type="submit"><b>Loginnnn</b></button>
   </div>
 </form>
 </body>
