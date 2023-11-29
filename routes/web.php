@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\KasirController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegistrasiController;
 
@@ -31,6 +32,10 @@ Route::post('/login', [LoginController::class, 'proses_login']);
 Route::get('/registrasi', [RegistrasiController::class, 'registrasi']);
 Route::post('/registrasi', [RegistrasiController::class, 'proses_registrasi']);
 
+Route::get('/home', [Controller::class, 'home']);
 
-    Route::get('/home', [Controller::class, 'home']);
+Route::get('/pelanggan', [KasirController::class, 'pelanggan']);
+
+
+
 

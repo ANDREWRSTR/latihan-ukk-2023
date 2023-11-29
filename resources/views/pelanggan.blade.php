@@ -45,17 +45,17 @@
 <table class="table table-primary">
     <thead>
       <tr>
-        <th scope="col">Nama Barang</th>
-        <th scope="col">Harga</th>
-        <th scope="col">Stok</th>
+        <th scope="col">Nama </th>
+        <th scope="col">Alamat</th>
+        <th scope="col">No Telp</th>
         
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td>Pop Mie</td>
-        <td>4000</td>
-        <td>20</td>
+        <td>ANDRE</td>
+        <td>Kotbar</td>
+        <td>0877777777</td>
       </tr>
       
     </tbody>
