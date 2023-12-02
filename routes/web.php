@@ -22,9 +22,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/home', [KasirController::class, 'home']);
 
-
-Route::get('/admin', [Controller::class, 'admin']);
 
 Route::get('/login', [LoginController::class, 'login'])->name('login');
 Route::post('/login', [LoginController::class, 'proses_login']);
@@ -32,9 +31,23 @@ Route::post('/login', [LoginController::class, 'proses_login']);
 Route::get('/registrasi', [RegistrasiController::class, 'registrasi']);
 Route::post('/registrasi', [RegistrasiController::class, 'proses_registrasi']);
 
-Route::get('/home', [Controller::class, 'home']);
+Route::get('/produk', [KasirController::class, 'produk']);
 
 Route::get('/pelanggan', [KasirController::class, 'pelanggan']);
+Route::get('/tambahproduk', [KasirController::class, 'tambahproduk']);
+Route::post('/tambahproduk', [KasirController::class, 'prosestambah']);
+
+Route::get('/hapus_produk/{id}', [KasirController:: class, 'hapus']);
+
+Route::get('/update_produk/{id}', [KasirController::class, 'update']);
+Route::post('/update_produk/{id}', [KasirController::class, 'proses_update']);
+
+Route::get('/penjualan', [KasirController::class, 'penjualan']);
+
+
+
+
+
 
 
 

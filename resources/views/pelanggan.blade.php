@@ -3,63 +3,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kasir Online</title>
-  <link rel="stylesheet" href="/aa/bs/css/bootstrap.min.css">
+  <title>Website Kasir</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      /* background-color: rgb(162, 193, 205); */
-      background-color: #fff;
-      margin: 0;
-      padding: 0;
+      font-family: cursive;                   
+      margin: 0;                                       
+      padding: 0;                                 
+      background-color: rgba(252, 252, 252, 0.822);  
+      display: flex;                                   
+      flex-direction: column;                           
+      align-items: flex-start;                          
     }
 
-    nav {
-      background-color: rgb(182, 213, 225);
+    header {
+      background-color: #0d0d0d;
+      height: 79px;
+      text-align: center;
+      width: 1360px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .logout {
+      margin-top: auto;
+      text-decoration: none;
+      text-align: center;
+      display: block;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .container {
+      display: flex;
+      
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 16px;
+      background-color: #888888;
+      width: 160px;
+      height: 82vh;
+      
+    }
+
+    .menu a {
+      text-decoration: none;
+      font-size: 19px;
+      margin-bottom: 20px;
+      transition: 0.3s;
+      color: black;
+    }
+
+    .menu a:hover {
       color: #fff;
-      height:67px;
     }
 
-    nav img{
-        margin-left:20px;
-        margin-top:10px;
+    .isi {
+      width: 1000px;
+      padding: 20px;
     }
 
-    h1{
-        text-align: center;
-        font-family: cursive;
-        color: black;
+    h2{
+        color: #fff;
+        
+        margin-left: 20px;
     }
-   
 
+    
   </style>
 </head>
 <body>
-  <nav>
-    <img style="width:100px;" src="/img/logo.png" alt="Logo">
-  </nav><br>
-<div>
-    <h1>Data Produk</h1>
-</div><br>
-<div class="container">
-<table class="table table-primary">
-    <thead>
-      <tr>
-        <th scope="col">Nama </th>
-        <th scope="col">Alamat</th>
-        <th scope="col">No Telp</th>
-        
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>ANDRE</td>
-        <td>Kotbar</td>
-        <td>0877777777</td>
-      </tr>
-      
-    </tbody>
-  </table>
-</div>
+
+  <header>
+    <h2>Kasir</h2>
+  </header>
+
+  <div class="container">
+    <div class="menu" >
+      <a href="{{ url('home') }}">Home</a>
+      <a href="{{ url('produk') }}">Produk</a>
+      <a href="{{ url('tambahproduk') }}">tambah produk</a>
+      <a href="{{ url('penjualan') }}">Penjualan</a>
+      <a href="#" class="logout">Logout</a>
+    </div>
+    <div class="isi">
+
+    </div>
+    </div>
 </body>
 </html>

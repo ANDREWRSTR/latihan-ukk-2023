@@ -72,6 +72,28 @@
         
         margin-left: 20px;
     }
+    input[type="text"]{
+        margin-bottom:10px;
+        margin-left:auto;
+        margin-right:20px;
+        width:420px;
+        padding:10px;
+        border-radius:5px;
+    }
+    .kotak{
+        width:450px;
+        border:1px solid black;
+        padding:20px;
+        margin-left:330px;
+        border-radius:5%;
+        background-color:#999999;
+        margin-top: 20px;
+    }
+    button{
+        padding:5px;
+        width:70px;
+        border-radius:5px;
+    }
 
     
   </style>
@@ -87,10 +109,24 @@
       <a href="{{ url('home') }}">Home</a>
       <a href="{{ url('produk') }}">Produk</a>
       <a href="{{ url('tambahproduk') }}">tambah produk</a>
-      <a href="#">Penjualan</a>
+      <a href="{{ url('penjualan') }}">Penjualan</a>
       <a href="#" class="logout">Logout</a>
     </div>
     <div class="isi">
+        <div class="kotak">
+            <form action={{url ("/update_produk/$produk->ProdukID")}} method="post">
+              @method('POST')
+              @csrf
+              <h1>Update Produk</h1>
+              <label>Nama Produk</label><br>
+              <input type="text" name="barang" value="{{$produk->NamaProduk}}"><br>
+              <label>Harga</label><br>
+              <input type="text" name="harga" value="{{$produk->Harga}}"><br>
+              <label>Stok</label> <br>
+              <input type="text" name="stok" value="{{$produk->Stok}}"><br>
+              <button type="submit">SIMPAN</button>
+          </form>
+          </div>
 
     </div>
     </div>

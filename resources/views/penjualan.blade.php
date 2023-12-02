@@ -72,6 +72,45 @@
         
         margin-left: 20px;
     }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin-top: 20px;
+      margin-left: 50px;
+      
+    }
+
+    th, td {
+      border: 1px solid #0d0d0d;
+      padding: 12px;
+      text-align: left;
+      width: 200px;
+    }
+
+    th {
+      background-color: #0d0d0d;
+      color: #fff;
+      
+    }
+    td {
+      background-color: #888888;
+    }
+
+    h1{
+        text-align: center;
+    }
+
+    h2{
+        color: #fff;
+        
+        margin-left: 20px;
+    }
+    /* button{
+      padding: 5px;
+      margin-left:20px;
+      width:80px;
+      border-radius:5px;
+    } */
 
     
   </style>
@@ -87,12 +126,33 @@
       <a href="{{ url('home') }}">Home</a>
       <a href="{{ url('produk') }}">Produk</a>
       <a href="{{ url('tambahproduk') }}">tambah produk</a>
-      <a href="#">Penjualan</a>
+      <a href="{{ url('penjualan') }}">Penjualan</a>
       <a href="#" class="logout">Logout</a>
     </div>
     <div class="isi">
-
-    </div>
+        <h1>Data Penjualan</h1>
+        <table>
+          <tr>
+            <th>Tanggal Penjualan</th>
+            <th>SubTotal</th>
+            <th>ID Pelanggan </th>
+            {{-- <th>Opsi</th> --}}
+          </tr>
+          <tr>@foreach ($penjualan as $penjualan)
+            <td>{{$penjualan->TanggalPenjualan}}</td>
+            <td>{{$penjualan->TotalHarga}}</td>
+            <td>{{$penjualan->PelangganID}}</td>
+            {{-- <td>
+              <a href="/hapus_produk/{{$penjualan->ProdukID}}"><button type="button" style="background-color:red;" ><b>hapus</b></button></a>
+              <a href="/update_produk/{{$penjualan->ProdukID}}"><button type="button" style="background-color:green;" ><b>update</b></button></a>
+            </td> --}}
+          </tr>@endforeach
+          
+  
+  
+        </table>
+        
+      </div>
     </div>
 </body>
 </html>
