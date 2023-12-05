@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
 use App\models\produk;
-use App\models\penjualan;
+
 
 
 
@@ -25,7 +25,9 @@ class KasirController extends Controller
     }
 
     function pelanggan (){
-        return view('pelanggan');
+
+        $pelanggan = DB::table('pelanggan')->get();
+        return view('pelanggan',['pelanggan'=> $pelanggan]);
     }
 
     function tambahproduk(){
@@ -81,5 +83,13 @@ class KasirController extends Controller
         $penjualan = DB::table('penjualan')->get();
         return view('penjualan',['penjualan'=>$penjualan]);
     }
+
+    function detail($id){
+        
+        $produk = DB::table('produk')->where('ProdukID',$id)->get();
+        return view('detail',['produk' =>$produk]);
+    }
+
+
 }
 

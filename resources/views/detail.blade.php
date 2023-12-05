@@ -65,7 +65,6 @@
     .isi {
       width: 1000px;
       padding: 20px;
-      
     }
 
     table {
@@ -80,7 +79,7 @@
       border: 1px solid #0d0d0d;
       padding: 12px;
       text-align: left;
-      width: 200px;
+      width: 80px;
     }
 
     th {
@@ -104,10 +103,9 @@
     button{
       padding: 5px;
       margin-left:20px;
-      width: 60px;
+      width:60px;
       border-radius:10px;
     }
-    
     img{
       width: 30px;
     }
@@ -130,24 +128,22 @@
       <a href="{{ url('/logout')}}" class="logout">Logout</a>
     </div>
     <div class="isi">
-      <h1>Data Produk</h1>
+      <h1>Detail Produk</h1>
       <table>
         <tr>
+          <th>ID Produk</th>
           <th>Nama Produk</th>
           <th>Harga</th>
           <th>Stok</th>
           <th>Opsi</th>
         </tr>
         <tr>@foreach ($produk as $produk)
+          <td>{{$produk->ProdukID}}</td>
           <td>{{$produk->NamaProduk}}</td>
           <td>RP.{{$produk->Harga}}</td>
           <td>{{$produk->Stok}}</td>
           <td>
-            <a href="/detail_produk/{{$produk->ProdukID}}"><button type="button" style="background-color:white;" ><img src="/img/detail.png"></button></a>
-            <a href="/hapus_produk/{{$produk->ProdukID}}"><button type="button" style="background-color:red;" ><img src="/img/delete.png" alt=""></button></a>
-
-            {{-- <a href="/hapus_produk/{{$produk->ProdukID}}"><button type="button" style="background-color:red;" ><b>hapus</b></button></a>
-            <a href="/update_produk/{{$produk->ProdukID}}"><button type="button" style="background-color:green;" ><b>update</b></button></a> --}}
+            <a href="/update_produk/{{$produk->ProdukID}}"><button type="button" style="background-color:green;" ><img src="/img/edit.png" alt=""></button></a>
           </td>
         </tr>@endforeach
         

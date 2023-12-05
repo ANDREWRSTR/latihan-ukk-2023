@@ -59,7 +59,7 @@
   <div class="container">
     <h1>Login</h1>
       <input type="text" placeholder="username" name="username" autocomplete="off" required><br>
-      <input type="password" placeholder="password" name="username" autocomplete="off" required><br>
+      <input type="password" placeholder="password" name="password" autocomplete="off" required><br>
       <button type="submit"><b>Login</b></button>
   </div>
 </form>

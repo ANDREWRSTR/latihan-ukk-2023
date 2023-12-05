@@ -31,7 +31,6 @@ Route::post('/login', [LoginController::class, 'proses_login']);
 Route::get('/registrasi', [RegistrasiController::class, 'registrasi']);
 Route::post('/registrasi', [RegistrasiController::class, 'proses_registrasi']);
 
-Route::get('/produk', [KasirController::class, 'produk']);
 
 Route::get('/pelanggan', [KasirController::class, 'pelanggan']);
 Route::get('/tambahproduk', [KasirController::class, 'tambahproduk']);
@@ -43,6 +42,15 @@ Route::get('/update_produk/{id}', [KasirController::class, 'update']);
 Route::post('/update_produk/{id}', [KasirController::class, 'proses_update']);
 
 Route::get('/penjualan', [KasirController::class, 'penjualan']);
+
+Route::get('/detail_produk/{id}', [KasirController::class, 'detail']);
+
+Route::get('/logout',[LoginController::class,'logout']);
+
+ Route::middleware(['auth'])->group(function(){
+    Route::get('/produk', [KasirController::class, 'produk']);
+
+ });
 
 
 

@@ -4,20 +4,22 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Foundation\Auth\User as Authenticatable;
+
 
 class pegawai extends Model
 {
     use HasFactory;
 
 
-    protected $fillable = [
-        "PegawaiID",
-        "NamaPetugas",
-        "Username",
-        "Password",
-        "Telp",
-        "Level"
-    ];
+    // protected $fillable = [
+    //     'PegawaiID',
+    //     'NamaPegawai',
+    //     'username',
+    //     'password',
+    //     'Telp',
+    //     'Level'
+    // ];
 
-    protected $table = "pegawai";
+    // protected $table = "pegawai";
 }

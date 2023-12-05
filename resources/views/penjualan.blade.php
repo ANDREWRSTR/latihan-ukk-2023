@@ -127,7 +127,9 @@
       <a href="{{ url('produk') }}">Produk</a>
       <a href="{{ url('tambahproduk') }}">tambah produk</a>
       <a href="{{ url('penjualan') }}">Penjualan</a>
-      <a href="#" class="logout">Logout</a>
+      <a href="{{ url('pelanggan') }}">pelanggan</a>
+
+      <a href="{{ url('/logout')}}" class="logout">Logout</a>
     </div>
     <div class="isi">
         <h1>Data Penjualan</h1>
