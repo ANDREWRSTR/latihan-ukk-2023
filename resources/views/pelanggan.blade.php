@@ -9,7 +9,7 @@
       font-family: cursive;                   
       margin: 0;                                       
       padding: 0;                                 
-      background-color: rgba(252, 252, 252, 0.822);  
+      background-color: #999999;  
       display: flex;                                   
       flex-direction: column;                           
       align-items: flex-start;                          
@@ -47,7 +47,8 @@
       background-color: #888888;
       width: 160px;
       height: 82vh;
-      
+      border: none;
+      border-right: 1px solid black;
     }
 
     .menu a {
@@ -99,7 +100,16 @@
     h1{
         text-align: center;
     }
-
+    button{
+      padding: 5px;
+      margin-left:20px;
+      width: 60px;
+      border-radius:10px;
+    }
+    
+    img{
+      width: 30px;
+    }
 
     
   </style>
@@ -117,6 +127,7 @@
       <a href="{{ url('tambahproduk') }}">tambah produk</a>
       <a href="{{ url('penjualan') }}">Penjualan</a>
       <a href="{{ url('pelanggan') }}">pelanggan</a>
+      <a href="{{ url('tambahpelanggan') }}">tambah pelanggan</a>
 
       <a href="{{ url('/logout')}}" class="logout">Logout</a>
     </div>
@@ -124,17 +135,20 @@
       <h1>Data Pelanggan</h1>
       <table>
         <tr>
-          <th>Nama Produk</th>
-          <th>Harga</th>
-          <th>Stok</th>
+          <th>Nama </th>
+          <th>Alamat</th>
+          <th>No Telepon</th>
           <th>Opsi</th>
         </tr>
         <tr>@foreach ($pelanggan as $pelanggan)
-          <td>{{$pelanggan->PelangganID}}</td>
+          
           <td>{{$pelanggan->NamaPelanggan}}</td>
           <td>{{$pelanggan->Alamat}}</td>
           <td>{{$pelanggan->NomorTelepon}}</td>
+          <td>
+            <a href="/detail_pelanggan/{{$pelanggan->PelangganID}}"><button type="button" style="background-color:white;" ><img src="/img/detail.png"></button></a>
 
+          </td>
           
         </tr>@endforeach
         

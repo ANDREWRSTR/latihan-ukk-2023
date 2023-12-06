@@ -9,7 +9,7 @@
       font-family: cursive;                   
       margin: 0;                                       
       padding: 0;                                 
-      background-color: #999999;  
+      background-color:#999999;  
       display: flex;                                   
       flex-direction: column;                           
       align-items: flex-start;                          
@@ -36,6 +36,7 @@
 
     .container {
       display: flex;
+      
     }
 
     .menu {
@@ -63,12 +64,13 @@
     }
 
     .isi {
-      width: 900px;
+      width: 1000px;
       padding: 20px;
     }
 
     h2{
         color: #fff;
+        
         margin-left: 20px;
     }
     h1{
@@ -103,6 +105,8 @@
     label{
       margin-left: 11px;
     }
+
+    
   </style>
 </head>
 <body>
@@ -112,33 +116,33 @@
   </header>
 
   <div class="container">
-      <div class="menu" >
-        <a href="{{ url('home') }}">Home</a>
-        <a href="{{ url('produk') }}">Produk</a>
-        <a href="{{ url('tambahproduk') }}">tambah produk</a>
-        <a href="{{ url('penjualan') }}">Penjualan</a>
-        <a href="{{ url('pelanggan') }}">pelanggan</a>
-        <a href="{{ url('tambahpelanggan') }}">tambah pelanggan</a>
+    <div class="menu" >
+      <a href="{{ url('home') }}">Home</a>
+      <a href="{{ url('produk') }}">Produk</a>
+      <a href="{{ url('tambahproduk') }}">tambah produk</a>
+      <a href="{{ url('penjualan') }}">Penjualan</a>
+      <a href="{{ url('pelanggan') }}">pelanggan</a>
+      <a href="{{ url('tambahpelanggan') }}">tambah pelanggan</a>
 
-        <a href="{{ url('/logout')}}" class="logout">Logout</a>
-      </div>
-
-      <div class="isi">
+      <a href="{{ url('/logout')}}" class="logout">Logout</a>
+    </div>
+    <div class="isi">
         <div class="kotak">
-          <form action="tambahproduk" method="post">
-            @method('POST')
-            @csrf
-            <h1>Tambah Produk</h1>
-            <label>Nama Produk</label><br>
-            <input type="text" name="barang" autocomplete="off" ><br>
-            <label>Harga</label><br>
-            <input type="text" name="harga" autocomplete="off" ><br>
-            <label>Stok</label> <br>
-            <input type="text" name="stok" autocomplete="off" ><br>
-            <button type="submit">SIMPAN</button>
-        </form>
-        </div>
-      </div>
+            <form action={{url ("/update_pelanggan/$pelanggan->PelangganID")}} method="post">
+              @method('POST')
+              @csrf
+              <h1>Update Pelanggan</h1>
+              <label>Nama Pelanggan</label><br>
+              <input type="text" name="nama" value="{{$pelanggan->NamaPelanggan}}"><br>
+              <label>Alamat</label><br>
+              <input type="text" name="alamat" value="{{$pelanggan->Alamat}}"><br>
+              <label>No Telepon</label> <br>
+              <input type="text" name="telp" value="{{$pelanggan->NomorTelepon}}"><br>
+              <button type="submit">SIMPAN</button>
+          </form>
+          </div>
+
+    </div>
     </div>
 </body>
 </html>

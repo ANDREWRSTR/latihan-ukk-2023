@@ -9,7 +9,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: rgb(182, 213, 225);
+      background-color: #888888;
     }
 
     input{
@@ -34,7 +34,7 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      background-color: rgb(170, 200, 215);
+      background-color: #999999;
     }
     button{
       width:84.5%;
@@ -43,12 +43,12 @@
       border-radius:10px;
       margin-top:10px;
       font-family:cursive;
-      background-color: rgb(182, 213, 225);
+      background-color: #999999;
       margin-left:7%;
       cursor:pointer;
     }
     button:hover{
-      background-color:rgb(165, 190, 210);
+      background-color: #888888;
     }
 
     select {

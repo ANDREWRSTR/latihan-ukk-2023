@@ -21,7 +21,7 @@ class LoginController extends Controller
         if(auth::attempt($data_login)){
             return redirect("produk");
         }else{
-            return redirect("login");
+            return redirect("login")->with("error","username atau password salah");
         }
     }
 

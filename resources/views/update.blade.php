@@ -9,7 +9,7 @@
       font-family: cursive;                   
       margin: 0;                                       
       padding: 0;                                 
-      background-color: rgba(252, 252, 252, 0.822);  
+      background-color:#999999;  
       display: flex;                                   
       flex-direction: column;                           
       align-items: flex-start;                          
@@ -47,7 +47,8 @@
       background-color: #888888;
       width: 160px;
       height: 82vh;
-      
+      border: none;
+      border-right: 1px solid black;
     }
 
     .menu a {
@@ -72,27 +73,37 @@
         
         margin-left: 20px;
     }
+    h1{
+      text-align: center;
+    }
     input[type="text"]{
         margin-bottom:10px;
-        margin-left:auto;
-        margin-right:20px;
-        width:420px;
+        margin-left:11px;
+        width:660px;
         padding:10px;
-        border-radius:5px;
+        border-radius:10px;
+        border: 1px solid black;
     }
     .kotak{
-        width:450px;
+        width:700px;
         border:1px solid black;
         padding:20px;
-        margin-left:330px;
-        border-radius:5%;
-        background-color:#999999;
-        margin-top: 20px;
+        margin-left:180px;
+        border-radius:5px;
+        background-color:#888888;
+        margin-top:20px;
     }
     button{
-        padding:5px;
-        width:70px;
-        border-radius:5px;
+        padding:10px;
+        width:80px;
+        border-radius:7px;
+        margin-top: 10px;
+        margin-top: 10px;
+        margin-left: 11px;
+        border: 1px solid black;
+    }
+    label{
+      margin-left: 11px;
     }
 
     
@@ -111,6 +122,7 @@
       <a href="{{ url('tambahproduk') }}">tambah produk</a>
       <a href="{{ url('penjualan') }}">Penjualan</a>
       <a href="{{ url('pelanggan') }}">pelanggan</a>
+      <a href="{{ url('tambahpelanggan') }}">tambah pelanggan</a>
 
       <a href="{{ url('/logout')}}" class="logout">Logout</a>
     </div>

@@ -90,6 +90,60 @@ class KasirController extends Controller
         return view('detail',['produk' =>$produk]);
     }
 
+    function tambah_pelanggan (){
+        return view('tambahpelanggan');
+    }
 
-}
+    function proses_tambah_pelanggan (Request $request){
+
+            $nama = $request-> nama;
+            $alamat = $request-> alamat;
+            $telp = $request-> telp;
+    
+            DB::table('pelanggan')->insert([
+    
+                'NamaPelanggan' => $nama,
+                'Alamat' => $alamat,
+                'NomorTelepon' => $telp
+            ]);
+            return redirect("/pelanggan");
+        }
+
+        function detailpelanggan ($id){
+            $pelanggan = DB::table('pelanggan')->where('PelangganID',$id)->get();
+            return view('detailpelanggan',['pelanggan'=>$pelanggan]);
+        }
+
+        function updatepelanggan ($id){
+            $pelanggan = DB::table('pelanggan')->where('PelangganID','=',$id)->first();
+            return view('updatepelanggan',['pelanggan' => $pelanggan]);
+        }
+
+        function proses_update_pelanggan(request $request , $id){
+
+       
+            $nama = $request->nama;
+            $alamat = $request->alamat;
+            $telp = $request->telp;
+            
+    
+            DB::table('pelanggan')->where('PelangganID','=',$id)->update([
+                
+                'NamaPelanggan' => $nama,
+                'Alamat' => $alamat,
+                'NomorTelepon' => $telp,
+             
+            ]);
+            
+            return redirect('/pelanggan');
+        }
+
+        function hapuspelanggan($id){
+            DB::table('pelanggan')->where('PelangganID', '=', $id)->delete();
+
+            return redirect("/pelanggan");
+        }
+    }
+
+
 

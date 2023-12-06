@@ -125,16 +125,16 @@
 
       <div class="isi">
         <div class="kotak">
-          <form action="tambahproduk" method="post">
+          <form action="tambahpelanggan" method="post">
             @method('POST')
             @csrf
-            <h1>Tambah Produk</h1>
-            <label>Nama Produk</label><br>
-            <input type="text" name="barang" autocomplete="off" ><br>
-            <label>Harga</label><br>
-            <input type="text" name="harga" autocomplete="off" ><br>
-            <label>Stok</label> <br>
-            <input type="text" name="stok" autocomplete="off" ><br>
+            <h1>Tambah Pelanggan</h1>
+            <label>Nama Pelanggan</label><br>
+            <input type="text" name="nama" autocomplete="off" ><br>
+            <label>Alamat</label><br>
+            <input type="text" name="alamat" autocomplete="off" ><br>
+            <label>No Telepon</label> <br>
+            <input type="text" name="telp" autocomplete="off" ><br>
             <button type="submit">SIMPAN</button>
         </form>
         </div>

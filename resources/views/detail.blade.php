@@ -9,7 +9,7 @@
       font-family: cursive;                   
       margin: 0;                                       
       padding: 0;                                 
-      background-color: rgba(252, 252, 252, 0.822);  
+      background-color: #999999;  
       display: flex;                                   
       flex-direction: column;                           
       align-items: flex-start;                          
@@ -46,7 +46,8 @@
       background-color: #888888;
       width: 160px;
       height: 82vh;
-      
+      border: none;
+      border-right: 1px solid black;
       
     }
 
@@ -102,7 +103,7 @@
     }
     button{
       padding: 5px;
-      margin-left:20px;
+      margin-left:17px;
       width:60px;
       border-radius:10px;
     }
@@ -124,6 +125,7 @@
       <a href="{{ url('tambahproduk') }}">tambah produk</a>
       <a href="{{ url('penjualan') }}">Penjualan</a>
       <a href="{{ url('pelanggan') }}">pelanggan</a>
+      <a href="{{ url('tambahpelanggan') }}">tambah pelanggan</a>
 
       <a href="{{ url('/logout')}}" class="logout">Logout</a>
     </div>
@@ -144,6 +146,8 @@
           <td>{{$produk->Stok}}</td>
           <td>
             <a href="/update_produk/{{$produk->ProdukID}}"><button type="button" style="background-color:green;" ><img src="/img/edit.png" alt=""></button></a>
+            <a href="/hapus_produk/{{$produk->ProdukID}}"><button type="button" style="background-color:red;" ><img src="/img/delete.png" alt=""></button></a>
+
           </td>
         </tr>@endforeach
         

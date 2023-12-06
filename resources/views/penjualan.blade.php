@@ -9,7 +9,7 @@
       font-family: cursive;                   
       margin: 0;                                       
       padding: 0;                                 
-      background-color: rgba(252, 252, 252, 0.822);  
+      background-color: #999999;  
       display: flex;                                   
       flex-direction: column;                           
       align-items: flex-start;                          
@@ -47,7 +47,8 @@
       background-color: #888888;
       width: 160px;
       height: 82vh;
-      
+      border: none;
+      border-right: 1px solid black;
     }
 
     .menu a {
@@ -128,6 +129,7 @@
       <a href="{{ url('tambahproduk') }}">tambah produk</a>
       <a href="{{ url('penjualan') }}">Penjualan</a>
       <a href="{{ url('pelanggan') }}">pelanggan</a>
+      <a href="{{ url('tambahpelanggan') }}">tambah pelanggan</a>
 
       <a href="{{ url('/logout')}}" class="logout">Logout</a>
     </div>
