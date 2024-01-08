@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
-  <link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZEZG3WF11zoLSAGy_0Meb-fnas6JZzarw7w&usqp=CAU">
   <style>
     body{
       display: flex;

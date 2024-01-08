@@ -95,7 +95,7 @@
       <a href="{{ url('/logout')}}" class="logout">Logout</a>
     </div>
     <div class="isi">
-
+        <h1>INI HOME</h1>
     </div>
     </div>
 </body>

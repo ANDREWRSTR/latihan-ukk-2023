@@ -19,7 +19,7 @@ class LoginController extends Controller
     function proses_login(Request $request){
         $data_login = $request->only("username","password");
         if(auth::attempt($data_login)){
-            return redirect("produk");
+            return redirect("home");
         }else{
             return redirect("login")->with("error","username atau password salah");
         }
